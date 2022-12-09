@@ -73,6 +73,7 @@ def get_rel_dists_by_moves(move_list):
         if v_pos < v_min:
             v_min = v_pos
     print("Rel movement dists:", f"[({h_min}, {h_max}), ({v_min},{v_max})]")
+    print()
     return ((h_min, h_max), (v_min, v_max))
 
 class Board:
@@ -123,14 +124,18 @@ if __name__ == "__main__":
     print(str(p1_board))
     for move in move_list:
         p1_board.update_with_move(move)
+    print("After moves...")
     print(str(p1_board))
+    print()
     print("Part 1:", p1_board.sum_tail_positions())
 
     # part 2
-
+    print()
     p2_board: Board = Board(board_size, initial_head_pos, 10)
     print(str(p2_board))
     for move in move_list:
         p2_board.update_with_move(move)
+    print("After moves...")
     print(str(p2_board))
-    print("Part 2", p2_board.sum_tail_positions())
+    print()
+    print("Part 2:", p2_board.sum_tail_positions())
