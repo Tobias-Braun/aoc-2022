@@ -5,7 +5,7 @@ np.set_printoptions(threshold=sys.maxsize)
 
 
 
-paths = [[eval(exp) for exp in line.split(" -> ")] for line in open("input.txt").read().strip().splitlines()]
+paths = [[eval(exp) for exp in line.split(" -> ")] for line in open(0).read().strip().splitlines()]
 flatten_paths = list(chain.from_iterable(paths))
 
 xes = [pos[0] for pos in flatten_paths]
